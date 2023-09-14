@@ -12,7 +12,7 @@
 - [Issue](#issue)
 - [TODO](#todo)
 
-## 🖌️ Front-End
+## 🎨 Front-End
 ### 기술 스택
 - Thymeleaf
 - Toast UI Grid
