@@ -25,7 +25,7 @@ public class Board {
     private Long id; // PK
     @Column(nullable = true)
     private String title; // 제목
-    @Column(nullable = true)
+    @Column(nullable = true, length = 1000)
     private String content; // 내용
     @Column(nullable = true)
     private String writer; // 작성자

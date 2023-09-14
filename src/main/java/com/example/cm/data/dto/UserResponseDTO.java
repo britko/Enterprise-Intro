@@ -6,17 +6,17 @@ import lombok.Setter;
 @Getter
 @Setter
 public class UserResponseDTO {
-    private Long userId;
-    private String userName;
+    private Long id;
+    private String name;
     private String password;
-    private String userRole;
+    private String role;
 
     public UserResponseDTO() {}
 
-    public UserResponseDTO(Long userId, String userName, String password, String userRole) {
-        this.userId = userId;
-        this.userName = userName;
+    public UserResponseDTO(Long id, String name, String password, String role) {
+        this.id = id;
+        this.name = name;
         this.password = password;
-        this.userRole = userRole;
+        this.role = role;
     }
 }

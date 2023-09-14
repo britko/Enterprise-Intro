@@ -15,16 +15,16 @@ import java.time.LocalDateTime;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
-
-    @Column(nullable = true)
-    private String userName;
+    private Long id;
 
     @Column(nullable = true)
     private String password;
 
     @Column(nullable = true)
-    private String userRole;
+    private String name;
+
+    @Column(nullable = true)
+    private String role;
 
     @CreatedDate
     private LocalDateTime createdAt;
