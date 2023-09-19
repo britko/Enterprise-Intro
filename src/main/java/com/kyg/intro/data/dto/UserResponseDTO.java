@@ -1,5 +1,6 @@
 package com.kyg.intro.data.dto;
 
+import com.kyg.intro.data.entity.User;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,11 +10,11 @@ public class UserResponseDTO {
     private Long id;
     private String name;
     private String password;
-    private String role;
+    private User.Role role;
 
     public UserResponseDTO() {}
 
-    public UserResponseDTO(Long id, String name, String password, String role) {
+    public UserResponseDTO(Long id, String name, String password, User.Role role) {
         this.id = id;
         this.name = name;
         this.password = password;

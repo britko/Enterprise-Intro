@@ -1,5 +1,6 @@
 package com.kyg.intro.data.dto;
 
+import com.kyg.intro.data.entity.User;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,9 +9,9 @@ import lombok.Setter;
 public class UserDTO {
     private String name;
     private String password;
-    private String role;
+    private User.Role role;
 
-    public UserDTO(String name, String password, String role) {
+    public UserDTO(String name, String password, User.Role role) {
         this.name = name;
         this.password = password;
         this.role = role;

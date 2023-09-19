@@ -26,7 +26,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public void saveSchedule(ScheduleDTO scheduleDTO) {
 
 //        scheduleDTO.setCreatedAt(LocalDateTime.now()); // 생성일시 적용
@@ -36,7 +36,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public void updateSchedule(ScheduleDTO scheduleDTO) {
 
         scheduleDTO.setUpdatedAt(LocalDateTime.now());
@@ -46,8 +46,8 @@ public class ScheduleServiceImpl implements ScheduleService {
     }
 
     @Override
-    @Transactional
-    public void deleteSchedule(Integer id) {
+//    @Transactional
+    public void deleteSchedule(Long id) {
 
         Optional<Schedule> selectedSchdule = scheduleRepository.findById(id);
 

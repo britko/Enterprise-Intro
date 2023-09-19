@@ -36,9 +36,9 @@ public class ScheduleController {
         return jsonStr;
     }
 
-    //TODO: 생성, 수정, 삭제 시 새로고침 없이 화면에 반영되게 해야함
     @PostMapping("/schedule/data")
     public void createSchedule(ScheduleDTO scheduleDTO) {
+
         System.out.println("생성 : " + scheduleDTO);
 
         scheduleService.saveSchedule(scheduleDTO);
@@ -52,7 +52,7 @@ public class ScheduleController {
     }
 
     @DeleteMapping("/schedule/data")
-    public void deleteSchedule(Integer id) {
+    public void deleteSchedule(Long id) {
         scheduleService.deleteSchedule(id);
 
     }

@@ -17,7 +17,7 @@ public class Schedule {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private String groupId;
 
@@ -48,4 +48,5 @@ public class Schedule {
     public void setDafaultValues() {
         this.createdAt = LocalDateTime.now();
     }
+
 }

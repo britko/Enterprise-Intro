@@ -23,12 +23,15 @@ public class UserController {
         return "UserFrom";
     }
     @PostMapping("/signup")
-    public UserResponseDTO signup(UserDTO userDTO) {
-        return userService.saveUser(userDTO);
+    public String signup(UserDTO userDTO) {
+        userService.saveUser(userDTO);
+        return "redirect:/user";
     }
     @PostMapping("/login")
-    public UserResponseDTO login(UserDTO userDTO) {
-        return userService.saveUser(userDTO);
+    public String login(UserDTO userDTO) {
+        userService.saveUser(userDTO);
+
+        return "redirect:/";
     }
 
 //    @GetMapping("/signup")

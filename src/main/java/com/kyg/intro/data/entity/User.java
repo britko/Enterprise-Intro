@@ -17,14 +17,15 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String password;
 
     @Column(nullable = true)
     private String name;
 
-    @Column(nullable = true)
-    private String role;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @CreatedDate
     private LocalDateTime createdAt;
@@ -32,4 +33,8 @@ public class User {
     @LastModifiedDate
     private LocalDateTime updatedAt;
 
+    public enum Role {
+        USER,
+        ADMIN;
+    }
 }
